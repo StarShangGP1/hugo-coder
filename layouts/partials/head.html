@@ -1,9 +1,5 @@
 {{ partial "head/meta-tags.html" . }}
 
-{{ if .Permalink }}
-<link rel="canonical" href="{{ .Permalink }}">
-{{ end }}
-
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3WQFW1T14Q"></script>
 <script>
@@ -13,6 +9,10 @@
 
   gtag('config', 'G-3WQFW1T14Q');
 </script>
+
+{{ if .Permalink }}
+<link rel="canonical" href="{{ .Permalink }}">
+{{ end }}
 
 {{ partialCached "head/theme-styles.html" . }}
 
